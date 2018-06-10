@@ -59,6 +59,12 @@ app.get('/about', (req, res)=>{
   }); // this is for static page rendering
 });
 
+app.get('/projects', (req, res)=>{
+  res.render('projects.hbs', {
+    pageTitle: 'Projects'
+  });
+});
+
 app.get('/bad', (req, res) =>{
   res.send({
     errorMessage: 'Unable to handle request'
